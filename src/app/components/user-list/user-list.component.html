@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="card-container">
+    <div *ngFor="let user of users" class="user-card" >
+      {{ user.id }} - {{ user.name }} - {{ user.email }} - {{ user.phone }} - {{ user.address }}
+    </div>
+  </div>
+  <button routerLink="/user-form" class="go-to-form-button">Ir al Formulario</button>
+</div>
+

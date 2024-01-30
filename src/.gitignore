@@ -1,0 +1,30 @@
+# Node.js
+node_modules/
+
+# Logs y resultados de pruebas
+logs/
+*.log
+npm-debug.log*
+
+# Carpeta generada en entornos de desarrollo
+pids/
+*.pid
+*.seed
+*.pid.lock
+
+# Carpeta de cobertura de pruebas
+coverage/
+
+# Archivos de configuración
+*.config.js
+
+# Archivos de entorno
+.env
+.env.*
+
+# Almacén de paquetes npm
+.packages/
+
+# Yarn
+yarn-error.log
+yarn.lock

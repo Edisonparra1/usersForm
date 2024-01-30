@@ -1,0 +1,44 @@
+<form (ngSubmit)="onSubmit()" #userForm="ngForm">
+  <label for="name">Nombre:</label>
+  <input
+    type="text"
+    id="name"
+    name="name"
+    [(ngModel)]="user.name"
+    required
+    placeholder="{{ userForm.controls['name'].invalid && (userForm.controls['name'].dirty || userForm.controls['name'].touched) ? 'Por favor, ingresa un nombre válido.' : '' }}"
+  >
+
+  <label for="email">Correo electrónico:</label>
+  <input
+    type="email"
+    id="email"
+    name="email"
+    [(ngModel)]="user.email"
+    required
+    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+    placeholder="{{ userForm.controls['email'].invalid && (userForm.controls['email'].dirty || userForm.controls['email'].touched) ? 'Por favor, ingresa un correo electrónico válido.' : '' }}"
+  >
+
+  <label for="phone">Número de teléfono:</label>
+  <input
+    type="tel"
+    id="phone"
+    name="phone"
+    [(ngModel)]="user.phone"
+    required
+    placeholder="{{ userForm.controls['phone'].invalid && (userForm.controls['phone'].dirty || userForm.controls['phone'].touched) ? 'Por favor, ingresa un número de teléfono válido.' : '' }}"
+  >
+
+  <label for="address">Dirección:</label>
+  <input
+    type="text"
+    id="address"
+    name="address"
+    [(ngModel)]="user.address"
+    required
+    placeholder="{{ userForm.controls['address'].invalid && (userForm.controls['address'].dirty || userForm.controls['address'].touched) ? 'Por favor, ingresa una dirección válida.' : '' }}"
+  >
+
+  <button type="submit" [disabled]="userForm.invalid" class="submit-button">Enviar</button>
+</form>

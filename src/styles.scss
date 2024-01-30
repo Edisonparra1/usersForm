@@ -1,0 +1,111 @@
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+
+}
+
+.container{
+  text-align: center;
+}
+
+
+.card-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 18px;
+  border: solid 5px rgb(160, 193, 207);
+
+}
+
+.user-card {
+  width: 300px;
+  margin: 10px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  background-color: rgb(198, 219, 228);
+  color: #353232;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.go-to-form-button{
+  margin-top: 40px;
+  padding: 8px 50px;
+  background-color: rgb(43, 90, 110);
+  border: solid 2px black;
+  border-radius: 10px;
+  color: #ccc;
+  font-weight: bold;
+}
+
+
+
+//  estilos formulario
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 20px;
+  border: 1px solid rgb(160, 193, 207);
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+
+  label {
+    width: 100%;
+    text-align: left;
+    color: rgb(40, 42, 43);
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  input {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    border: 1px solid rgb(160, 193, 207);
+    border-radius: 3px;
+
+    &:focus {
+      outline: none;
+      border-color: #3498db;
+    }
+  }
+
+  button {
+    width: 100%;
+    background-color: rgb(43, 90, 110);
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:disabled {
+      background-color: #ddd;
+      cursor: not-allowed;
+    }
+  }
+
+
+  @media only screen and (max-width: 500px) {
+    input {
+      width: calc(100% - 16px);
+
+    }
+  }
+}
+
+
